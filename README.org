@@ -1,0 +1,6 @@
+#+title: README
+#+author: Jason Press
+
+This is the repo for all of my work for the Advent of Code 2024.
+
+My solutions are /not/ optimal, nor will I pretend they are. But they are /my/ solutions.

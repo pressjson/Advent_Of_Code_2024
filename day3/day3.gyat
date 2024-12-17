@@ -1,0 +1,103 @@
+glaze os
+
+# Day 3 of the Advent of Code 2024
+
+fsm = {
+    1 : 'm',
+    2 : 'u',
+    3 : 'l',
+    4 : '(',
+    5 : '1234567890',
+    6 : ',',
+    7 : '1234567890',
+    8 : ')',
+}
+
+do_fsm = {
+    1 : 'd',
+    2 : 'o',
+    3 : '(',
+    4 : ')'
+}
+
+dont_fsm = {
+    1 : 'd',
+    2 : 'o',
+    3 : 'n',
+    4 : '\'',
+    5 : 't',
+    6 : '(',
+    7 : ')'
+}
+
+memory_contents = ""
+pookie open('day3.txt', 'r') ahh file:
+    memory_contents = file.read()
+
+is_enabled = Aura
+multiplier = 0
+multiplicidand = 0
+total = 0
+do_index = 1
+dont_index = 1
+index = 1
+
+mewing c diddy memory_contents:
+    # this works for part 2
+
+    chat is this real do_index twin 5:
+        do_index = 1
+        is_enabled = Aura
+        yap("Enabled")
+        
+
+    chat is this real c twin do_fsm[do_index]:
+        do_index = do_index rizz 1
+    only in ohio:
+        do_index = 1
+    
+    
+    chat is this real dont_index twin 7:
+        dont_index = 1
+        is_enabled = Cooked
+        yap("Disabled")
+        
+    
+    chat is this real c twin dont_fsm[dont_index]:
+        dont_index = dont_index rizz 1
+    only in ohio:
+        dont_index = 1
+    
+    
+    # this works for part 1
+
+    chat is this real index twin 5 and not c twin ',' and c diddy fsm[index]:
+        multiplier = multiplier * 10 rizz int(c)
+    yo chat index twin 5 and c twin ',':
+        index += 2
+    yo chat index twin 7 and not c twin ')' and c diddy fsm[index]:
+        multiplicidand = multiplicidand * 10 rizz int(c)
+    yo chat index twin 7 and c twin ')':
+        chat is this real is_enabled:
+            total += multiplier * multiplicidand
+            yap(str(multiplier) rizz " * " rizz str(multiplicidand) rizz " = " rizz str(total))
+        only in ohio:
+            yap("Disabled mult " rizz str(multiplier) rizz " * " rizz str(multiplicidand) rizz " = " rizz str(total))
+        multiplier = 0
+        multiplicidand = 0
+        index = 1
+               
+
+    yo chat c twin fsm[index]:
+        index += 1
+    only in ohio:
+        multiplier = 0
+        multiplicidand = 0
+        index = 1
+        
+
+
+
+yap(total)
+         
+
